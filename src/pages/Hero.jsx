@@ -64,7 +64,7 @@ const Hero = () => {
 
         <p className='sm:text-4xl text-2xl font-medium text-center font-berlin'>Hi! I am Hardik Jain <span className='waving-hand'>👋🏻</span>
         </p>
-        <p className='text-center xl:text-6xl md:text-4xl sm:text-3xl text-3xl font-berlin font-black !leading-normal bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent'>Building Ai Powered Websites</p>
+        <p className='text-center xl:text-6xl md:text-4xl sm:text-3xl text-3xl font-berlin font-black !leading-normal bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent'>Building AI-Powered Web Experiences</p>
       </div>
       <div className='w-full h-full absolute inset-0 '>
         {/* <Leva /> */}

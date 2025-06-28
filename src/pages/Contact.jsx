@@ -61,7 +61,7 @@ const Contact = () => {
                         Let's Talk
                     </h3>
                     <p className='text-lg text text-neutral-100 mt-3 '>
-                        Whether You are Looking to build a new website  improve  your existing platform , or bring a unique project to life , I'm here to Help.
+                    Whether you're planning a new idea or refining an old one—I’m here to collaborate, innovate, and bring your ideas to life.
                     </p>
 
                     <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col space-y-7' >

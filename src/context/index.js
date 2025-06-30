@@ -65,6 +65,7 @@ export const navLinks = [
       href: 'https://interview-prep-five-iota.vercel.app/',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/project-logo1.svg',
+      img: '/Project/Aiinterview.png',
       logoStyle: {
         backgroundColor: '#24273a',
         border: '0.2px solid #FFCAAD',
@@ -117,6 +118,7 @@ export const navLinks = [
       href: 'https://youtube-snippets.vercel.app/',
       texture: '/textures/project/project2.mp4',
       logo: '/assets/project-logo2.jpg',
+      img: '/Project/ytsnippets.png',
       logoStyle: {
         backgroundColor: '#130A29',
         border: '0.2px solid #8F1B6E',
@@ -159,6 +161,7 @@ export const navLinks = [
       href: 'https://tone-genie.vercel.app/',
       texture: '/textures/project/project3.mp4',
       logo: '/assets/texten.png',
+      img: '/Project/toneGenie.png',
      logoStyle: {
         backgroundColor: '#1C1A43',
         border: '0.2px solid #252262',
@@ -206,6 +209,7 @@ export const navLinks = [
       href: 'https://hardikjain1043.github.io/Project_Spotify/',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/spotify.png',
+      img: '/Project/spclone.png  ',
       logoStyle: {
         backgroundColor: '#0E1F38',
         border: '0.2px solid #24D565',
@@ -238,6 +242,7 @@ export const navLinks = [
       href: 'https://getmeashikanji.vercel.app/',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/shikanji.png',
+      img: '/Project/getMeShikanji.png',
       logoStyle: {
         backgroundColor: '#0E1F38',
         border: '0.2px solid #A89B10',

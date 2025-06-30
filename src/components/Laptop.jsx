@@ -47,7 +47,7 @@ import { useGLTF } from '@react-three/drei'
 
 
 */
-const Laptop = ({ media, ...props }) => {
+const Laptop = ({ media, zoom = 1, rotation = 0, ...props }) => {
   const { nodes, materials } = useGLTF('/models/laptop.glb')
 
   const screenRef = useRef()
@@ -56,19 +56,30 @@ const Laptop = ({ media, ...props }) => {
   const texture = useMemo(() => {
     if (!media) return null;
     const loader = new THREE.TextureLoader();
-    return loader.load(media);
+    return loader.load(media, (tex) => {
+      // Ensure scaling is centered
+      tex.center.set(0.5, 0.5);
+      tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
+    });
   }, [media]);
 
   useEffect(() => {
-    if (screenRef.current) {
-      if (texture) {
-        screenRef.current.material = new THREE.MeshBasicMaterial({ map: texture });
-      } else {
-        // fallback to default screen material
-        screenRef.current.material = materials.Screen;
-      }
+    if (!screenRef.current) return;
+
+    if (texture) {
+      const scale = 2.07 / zoom; // zoom=2 → repeat=0.5
+      texture.repeat.set(scale, scale);
+      texture.offset.set(0.65 - scale / 2, 0.52 - scale / 2);
+      // apply rotation in degrees
+      texture.rotation = (rotation * Math.PI) / 180;
+      texture.needsUpdate = true;
+
+      screenRef.current.material = new THREE.MeshBasicMaterial({ map: texture });
+    } else {
+      // fallback to default screen material
+      screenRef.current.material = materials.Screen;
     }
-  }, [texture, materials]);
+  }, [texture, zoom, rotation, materials]);
   return (
     <group {...props} dispose={null}>
       <group name="RootNode" rotation={[Math.PI / 2, 0, 0]} userData={{ name: 'RootNode' }}>

@@ -151,14 +151,14 @@ export const navLinks = [
         },
       ],
     },
-    {
-      title: 'Text Enhancer - AI-powered Text Enhancer',
-      desc: 'Text Enhancer is a cutting-edge browser extension that leverages AI technology to enhance the readability of text. With features like AI-driven text editing, essay writing, bid writing, chat generation, and grammar improvement, it revolutionizes the way you interact with text online.',
+    { 
+      title: 'Tone Genie - AI-powered Text Enhancer',
+      desc: 'Tone Genie is a cutting-edge browser extension that leverages AI technology to enhance the readability of text. With features like AI-driven text editing, essay writing, bid writing, chat generation, and grammar improvement, it revolutionizes the way you interact with text online.',
       subdesc:
-        'Built with vite-react, javascript , google/generative-ai,and express, Text Enhancer is designed for optimal performance and scalability.',
-      href: 'https://github.com/Nexoraedge/Text_Enhancer',
+        'Built with vite-react, javascript , google/generative-ai,and express, Tone Genie is designed for optimal performance and scalability.',
+      href: 'https://tone-genie.vercel.app/',
       texture: '/textures/project/project3.mp4',
-      logo: '/assets/project-logo5.png',
+      logo: '/assets/texten.png',
      logoStyle: {
         backgroundColor: '#1C1A43',
         border: '0.2px solid #252262',
@@ -168,13 +168,33 @@ export const navLinks = [
       tags: [
         {
           id: 1,
-          name: 'React.js',
-          path: '/assets/react.svg',
+          name: 'Next.js',
+          path: '/assets/nextjs.png',
         },
         {
           id: 4,
           name: 'Google generative-ai',
           path: '/assets/googleai.png',
+        },
+        {
+          id: 3,
+          name: 'TailwindCSS',
+          path: '/assets/tailwindcss.png',
+        },
+        {
+          id: 2,
+          name: 'TypeScript',
+          path: '/assets/typescript.png',
+        },
+        {
+          id: 5,
+          name: 'firebase',
+          path: '/assets/firebase.png',
+        },
+        {
+          id: 6,
+          name: 'framermotion',
+          path: '/assets/framer.png',
         },
       ],
     },
@@ -295,5 +315,26 @@ export const navLinks = [
       title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
       icon: '/assets/notion.svg',
       animation: 'salute',
+    },
+  ];
+
+  export const footerlink = [
+    {
+      id: 1,
+      name: 'Github',
+      img: '/assets/github.svg',
+      href: 'https://github.com/Nexoraedge/',
+    },
+    {
+      id: 2,
+      name: 'X',
+      img: '/assets/x.svg',
+      href: 'https://x.com/DhoniAi',
+    },
+    {
+      id: 3,
+      name: 'mail',
+      img: '/assets/mail.svg',
+      href: 'mailto:hardikjain2030@gmail.com',
     },
   ];

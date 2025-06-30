@@ -1,9 +1,10 @@
 import React, { Suspense, useState } from 'react'
 import { myProjects } from '../context'
 import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import { Center } from '@react-three/drei';
 import CanvasLoader from '../components/CanvasLoder'
-import Tablet from '../components/Tablet';
+import Laptop from '../components/Laptop';
 
 const Projects = () => {
     const projectCount = myProjects.length;
@@ -76,13 +77,15 @@ const Projects = () => {
                     </div>
                 </div>
                 <div className="border-neutral-700/50 border  bg-neutral-950/20 rounded-lg h-96 md:h-full ">
-                    <Canvas >
+                    <Canvas camera={{ position: [2, 1, 5], fov: 45 }}>
                         <ambientLight intensity={1} />
-                        <directionalLight position={[10, 10, 1]} />
+                        <OrbitControls makeDefault enablePan={false} />
+                        <directionalLight position={[20, 50, 50]} />
                         <Center >
                             <Suspense fallback={<CanvasLoader />}>
-                                <group scale={0.02} position={[0, 0.5, 0]} rotation={[0, -0.1, 0]}>
-                                    <Tablet animationTrigger={seletedProjectIndex}  />
+                                <group scale={0.02} position={[0, 0.5, 0]} rotation={[0, 0, 0]}>
+                                
+                                    <Laptop media={CurrentProject.logo} />
                                 </group>
                             </Suspense>
                         </Center>

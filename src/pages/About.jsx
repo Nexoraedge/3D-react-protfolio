@@ -42,18 +42,18 @@ const About = () => {
                             <Globe height={326} width={326} backgroundColor='rgba(0,0,0,0)'
                                 backgroundImageOpaccity={0.5}
                                 showAtmosphere
-                                showGraticules
+                                
                                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
                                 labelsData={[
                                     {
-                                        lat: 32.12,
-                                        lng: 77.12,
+                                        lat: 26.92,
+                                        lng: 75.84,
                                         text: "I Am Here!!",
                                         textColor: "#fff",
-                                        size: 350,
+                                        size: 4000,
                                         FrontSide,
-                                        fontSize: 1.2,
+                                        fontSize: 1.8,
                                         color: "#fff",
                                     }
                                 ]}

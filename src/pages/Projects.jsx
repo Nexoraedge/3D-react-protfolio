@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Center } from '@react-three/drei';
 import CanvasLoader from '../components/CanvasLoder'
-import Laptop from '../components/Laptop';
+import LaptopFlyIn from '../components/LaptopFlyIn';
 
 const Projects = () => {
     const projectCount = myProjects.length;
@@ -79,18 +79,18 @@ const Projects = () => {
                 <div className="border-neutral-700/50 border  bg-neutral-950/20 rounded-lg h-96 md:h-full ">
                     <Canvas camera={{ position: [2, 1, 5], fov: 45 }}>
                         <ambientLight intensity={1} />
-        
+
                         {/* <OrbitControls makeDefault enablePan={false} /> */}
                         <directionalLight position={[20, 50, 50]} />
                         <Center >
                             <Suspense fallback={<CanvasLoader />}>
-                                <group scale={0.02} position={[-1, -0.8, -2.5]} rotation={[-1.5, 0.02, 0.35]}>
-                                <OrbitControls makeDefault enablePan={false}
-                                  minDistance={3.5}   // how close you can zoom
-                                  maxDistance={5}     
-                                
-                                enableZoom enableRotate={true} dampingFactor={0.02} />
-                                    <Laptop media={CurrentProject.img} zoom={2} rotation={0} />
+                                <group scale={0.02} rotation={[-1.5, 0.02, 0.35]}>
+                                    <OrbitControls makeDefault enablePan={false}
+                                        minDistance={3.5}   // how close you can zoom
+                                        maxDistance={5}
+
+                                        enableZoom enableRotate={true} dampingFactor={0.02} />
+                                    <LaptopFlyIn key={seletedProjectIndex} media={CurrentProject.img} zoom={2} rotation={0} />
                                 </group>
                             </Suspense>
                         </Center>

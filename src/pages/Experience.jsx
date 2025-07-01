@@ -11,7 +11,7 @@ const Experience = () => {
         <section className='sm:px-10 px-5 my-20'>
             <div className="w-full text-neutral-200">
                 <h3 className='sm:text-4xl text-3xl font-semibold bg-gradient-to-r from-[#BEC1CF] to-[#D5D8EA] bg-clip-text text-transparent'>
-                    My Work Experience
+                 My Journey <span className='text-[#AA3C30]'>💡</span>
                 </h3>
                 <div className="grid lg:grid-cols-3 grid-cols-1  mt-12">
                     <div className='col-span-1 rounded-lg 

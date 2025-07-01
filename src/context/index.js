@@ -79,11 +79,6 @@ export const navLinks = [
           path: '/assets/nextjs.png',
         },
         {
-          id: 2,
-          name: 'TailwindCSS',
-          path: 'assets/tailwindcss.png',
-        },
-        {
           id: 3,
           name: 'TypeScript',
           path: '/assets/typescript.png',
@@ -97,11 +92,6 @@ export const navLinks = [
           id: 5,
           name: 'Firebase',
           path: '/assets/firebase.png',
-        },
-        {
-          id: 6,
-          name: 'shadcn-ui',
-          path: '/assets/shadcn.png',
         },
         {
           id: 7,
@@ -296,31 +286,31 @@ export const navLinks = [
   export const workExperiences = [
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
-      duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-      icon: '/assets/framer.svg',
+      name: 'Built My First AI Tool (extension)',
+      pos: 'ToneGenie - AI-powered Text Enhancer',
+      duration: '2025 - June',
+      title: "ToneGenie is a browser extension that uses AI to improve text readability. It features AI-driven text editing, writing, chat generation , bit writing, and grammar improvement.",
+      icon: '/assets/tone_png.png',
       animation: 'victory',
     },
     {
       id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
-      duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-      icon: '/assets/figma.svg',
+      name: 'Learned Full-Stack Development',
+      pos: 'Full-Stack Developer',
+      duration: '2025 - March',
+      title: "I learned full-stack development using React,tailwindcss, github, Node.js, and MongoDB. I built some web applications like Getmeashikanji , TODO App and Password Saver. ",
+      icon: '/assets/web.png',
       animation: 'clapping',
     },
     {
       id: 3,
-      name: 'Notion',
-      pos: 'Junior Web Developer',
-      duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-      icon: '/assets/notion.svg',
+      name: 'First ever Fronted Project',
+      pos: 'My first fully working fronted project - Spotify Clone',
+      duration: '2025 - January',
+      title: "Spotify Clone is a simple web application built for learning purposes, using only HTML, CSS, and JavaScript. It demonstrates a basic understanding of web development concepts and serves as a starting point for further learning and improvement.",
+      icon: '/assets/spopng.png',
       animation: 'salute',
-    },
+    },    
   ];
 
   export const footerlink = [

@@ -34,7 +34,7 @@ export const navLinks = [
       id: 2,
       name: 'Lokesh Jain',
       position: 'Founder of Parshwanath Caterers',
-      img: 'assets/review4.png',
+      img: 'assets/MAMA.JPG',
       review:
         "Impressed with Hardik's work on our website. Professional, understood our needs and delivered a great website. Attention to detail and creativity were impressive.",
     },

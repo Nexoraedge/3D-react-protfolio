@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
       <ul className='flex flex-col items-center gap-4 sm:flex-row md:gap-6 relative z-20'>
         {navLinks.map(({ id, href, name }) => (
-          <li key={id} className='text-neutral-400 hover:text-white font-berlin max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5'>
+          <li key={id} className='text-neutral-200 hover:text-white font-berlin max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5'>
             <a onClick={() => {  }} href={href} className='text-neutral-400 hover:text-white font-berlin max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 '>{name}</a> </li>
         ))}
       </ul >
@@ -36,9 +36,9 @@ const Navbar = () => {
         </nav>
 
       </div>
-      <div className={`absolute left-0 right-0 bg-black-200 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${isOpen ? "max-h-[100vh] opacity-70" : "max-h-0"}`}>
+      <div className={`absolute left-0 right-0 bg-black-200  transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block ${isOpen ? "max-h-[100vh]" : "max-h-0"}`}>
 
-        <nav className='p-5 bg-neutral-800/50 backdrop-blur-sm '>
+        <nav className='p-5 bg-neutral-800/80 backdrop-blur-sm '>
           <Navitems />
 
         </nav>

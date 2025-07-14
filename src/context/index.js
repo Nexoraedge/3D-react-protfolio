@@ -332,4 +332,10 @@ export const navLinks = [
       img: '/assets/mail.svg',
       href: 'mailto:hardikjain2030@gmail.com',
     },
+    {
+      id:4,
+      name:'linkedIn',
+      img: '/assets/linke.png',
+      href: 'www.linkedin.com/in/devdhoni-ai'
+    }
   ];

@@ -1,3 +1,5 @@
+import { desc } from "motion/react-client";
+
 export const navLinks = [
     {
       id: 1,
@@ -57,6 +59,55 @@ export const navLinks = [
   ];
   
   export const myProjects = [
+    { 
+      title: 'Tone Genie - AI-powered Text Enhancer',
+      desc: 'Tone Genie is a cutting-edge browser extension that leverages AI technology to enhance the readability of text. With features like AI-driven text editing, essay writing, bid writing, chat generation, and grammar improvement, it revolutionizes the way you interact with text online.',
+      subdesc:
+        'Built with vite-react, javascript , google/generative-ai,and express, Tone Genie is designed for optimal performance and scalability.',
+      href: 'https://tone-genie.vercel.app/',
+      texture: '/textures/project/project3.mp4',
+      logo: '/assets/texten.png',
+      img: '/Project/toneGenie.png',
+     logoStyle: {
+        backgroundColor: '#1C1A43',
+        border: '0.2px solid #252262',
+        boxShadow: '0px 0px 60px 0px #635BFF4D',
+      },
+      spotlight: '/assets/spotlight5.png',
+      tags: [
+        {
+          id: 1,
+          name: 'vite',
+          path: '/assets/vite.png',
+        },
+        {
+          id: 4,
+          name: 'Google generative-ai',
+          path: '/assets/googleai.png',
+        },
+        {
+          id: 3,
+          name: 'TailwindCSS',
+          path: '/assets/tailwindcss.png',
+        },
+        {
+          id: 2,
+          name: 'TypeScript',
+          path: '/assets/typescript.png',
+        },
+        {
+          id: 5,
+          name: 'firebase',
+          path: '/assets/firebase.png',
+        },
+        {
+          id: 6,
+          name: 'framermotion',
+          path: '/assets/framer.png',
+        },
+      ],
+    },
+
     {
       title: 'Interview Prep - AI powered Interviewer',
       desc: 'Interview Prep is a unique Software-as-a-Service app that transforms the way interviews are conducted. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
@@ -143,16 +194,15 @@ export const navLinks = [
         },
       ],
     },
-    { 
-      title: 'Tone Genie - AI-powered Text Enhancer',
-      desc: 'Tone Genie is a cutting-edge browser extension that leverages AI technology to enhance the readability of text. With features like AI-driven text editing, essay writing, bid writing, chat generation, and grammar improvement, it revolutionizes the way you interact with text online.',
-      subdesc:
-        'Built with vite-react, javascript , google/generative-ai,and express, Tone Genie is designed for optimal performance and scalability.',
-      href: 'https://tone-genie.vercel.app/',
-      texture: '/textures/project/project3.mp4',
-      logo: '/assets/texten.png',
-      img: '/Project/toneGenie.png',
-     logoStyle: {
+    {
+      title: "Resume ATS - Ai powered Resume checker",
+      desc:"Resume ATS is an ai powered website that helps user to check the ATS of the Resume and get feedback  ,  improvemnts and Strong point of the Resume. Helps you to get a job ready Resume.",
+      subdesc:"Built with vite react-router-dom, Tailwind CSS, TypeScript, and Puter.js  , is desgined for optimal performance and scalability.",
+      href:"https://ai-resume-checker-five.vercel.app/",
+      texture:'/textures/project/project5.mp4',
+      logo: '/assets/project_resume.png',
+      img: '/Project/test.png',
+      logoStyle: {
         backgroundColor: '#1C1A43',
         border: '0.2px solid #252262',
         boxShadow: '0px 0px 60px 0px #635BFF4D',
@@ -160,14 +210,9 @@ export const navLinks = [
       spotlight: '/assets/spotlight5.png',
       tags: [
         {
-          id: 1,
-          name: 'Next.js',
-          path: '/assets/nextjs.png',
-        },
-        {
           id: 4,
-          name: 'Google generative-ai',
-          path: '/assets/googleai.png',
+          name: 'react-router-dom',
+          path: '/assets/reactrouter.png',
         },
         {
           id: 3,
@@ -181,14 +226,10 @@ export const navLinks = [
         },
         {
           id: 5,
-          name: 'firebase',
-          path: '/assets/firebase.png',
+          name: 'Puter.js',
+          path: '/assets/puter.png',
         },
-        {
-          id: 6,
-          name: 'framermotion',
-          path: '/assets/framer.png',
-        },
+        
       ],
     },
     {

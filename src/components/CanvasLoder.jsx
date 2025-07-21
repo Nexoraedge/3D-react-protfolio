@@ -14,11 +14,11 @@ const CanvasLoder = () => {
                 flexDirection: 'column'
             }}
         >
-           <span className='canvas-Loder'>
-            <p style={{fontSize:14,color:'white',fontWeight:800, marginTop:40}}>
-                {progress !== 0 ?`${progress.toFixed(2)}%` :'Loading...'}
-            </p>
-           </span>
+            <span className='canvas-Loder'>
+                <p style={{ fontSize: 16, color: 'cyan', fontWeight: 800, marginTop: 40 }}>
+                    {progress !== 0 ? `${progress.toFixed(2)}%` : 'Loading...'}
+                </p>
+            </span>
         </Html>
     )
 }

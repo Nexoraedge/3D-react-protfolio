@@ -60,7 +60,7 @@ const Hero = () => {
   return (
     <section id='home' className='min-h-screen flex flex-col relative '>
 
-      <div className="w-full mx-auto flex flex-col sm:mt-36 mt-20 sm:px-10 px-5 gap-3">
+      <div className="w-full mx-auto flex flex-col sm:mt-21 mt-10 sm:px-10 px-5 gap-3">
 
         <p className='sm:text-4xl text-2xl font-medium text-center font-berlin'>Hi! I am Hardik Jain <span className='waving-hand'>👋🏻</span>
         </p>

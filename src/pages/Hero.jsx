@@ -2,16 +2,14 @@ import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import HackingTable from '../components/HackingTable'
 import CanvasLoder from '../components/CanvasLoder'
-import { DirectionalLight } from 'three'
 // import { Leva, useControls } from 'leva'
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from '../context'
 import Target from '../components/Target'
 import ReactLogo from '../components/ReactLogo'
-import Cube from '../components/Cube'
-import { Ring } from '@react-three/drei'
 import Herocamera from '../components/Herocamera'
 import Button from '../components/Button'
+import GlobalLoader from '../components/GlobalLoader'
 
 const Hero = () => {
   // const  x =  useControls('HackingTable',{
@@ -59,6 +57,7 @@ const Hero = () => {
   const size = calculateSizes(isSmall, isMobile, isTablet);
   return (
     <section id='home' className='min-h-screen flex banner flex-col relative '>
+      <GlobalLoader />
 
       <div className="w-full mx-auto flex flex-col sm:mt-21 mt-10 sm:px-10 px-5 gap-3">
 

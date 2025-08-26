@@ -7,14 +7,13 @@ import Clients from './pages/Clients'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import Experience from './pages/Experience'
-import GlobalLoader from './components/GlobalLoader'
+ 
 
 
 const App = () => {
   return (
     <div className='bg-black  text-white w-full min-h-screen '>
-      <GlobalLoader />
-     
+      
       <Hero />
       <About />
       <Projects />

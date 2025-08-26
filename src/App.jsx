@@ -7,7 +7,6 @@ import Clients from './pages/Clients'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import Experience from './pages/Experience'
-import LocomotiveScroll from 'locomotive-scroll'
 import GlobalLoader from './components/GlobalLoader'
 
 

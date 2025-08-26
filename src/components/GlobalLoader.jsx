@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useProgress } from '@react-three/drei';
 
 // Full-screen global loader that listens to three.js DefaultLoadingManager via drei's useProgress
@@ -6,32 +6,43 @@ import { useProgress } from '@react-three/drei';
 const GlobalLoader = () => {
     const { progress, active } = useProgress();
     const [visible, setVisible] = useState(true);
+    const hasCompletedOnce = useRef(false);
 
     // Consider loading until progress reaches 100 and not active anymore
     const isLoading = useMemo(() => active || progress < 100, [active, progress]);
 
     useEffect(() => {
-        // Lock/unlock scroll
-        if (isLoading) {
+        // Lock/unlock scroll only while visible before first completion
+        if (isLoading && !hasCompletedOnce.current && visible) {
             const prev = document.body.style.overflow;
             document.body.style.overflow = 'hidden';
             return () => {
                 document.body.style.overflow = prev;
             };
         }
-    }, [isLoading]);
+    }, [isLoading, visible]);
 
     useEffect(() => {
         if (!isLoading) {
-            // Allow a brief fade-out before unmounting the overlay
-            const t = setTimeout(() => setVisible(false), 400);
-            return () => clearTimeout(t);
-        } else if (!visible) {
-            setVisible(true);
+            // First time we finish loading: fade out and mark as completed
+            if (!hasCompletedOnce.current) {
+                const t = setTimeout(() => setVisible(false), 400);
+                hasCompletedOnce.current = true;
+                return () => clearTimeout(t);
+            }
+            // After first completion, keep hidden permanently
+            setVisible(false);
+        } else {
+            // While loading again:
+            // If it's before first completion, show; otherwise keep hidden
+            setVisible(!hasCompletedOnce.current);
         }
-    }, [isLoading, visible]);
+    }, [isLoading]);
 
-    if (!visible && !isLoading) return null;
+    if ((!visible && !isLoading) || hasCompletedOnce.current) {
+        // After first completion, do not render overlay again
+        return null;
+    }
 
     return (
         <div

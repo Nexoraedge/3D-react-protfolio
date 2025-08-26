@@ -3,7 +3,6 @@ import { myProjects } from '../context'
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { Center } from '@react-three/drei';
-import CanvasLoader from '../components/CanvasLoder'
 import LaptopFlyIn from '../components/LaptopFlyIn';
 
 const Projects = () => {
@@ -83,14 +82,14 @@ const Projects = () => {
                         {/* <OrbitControls makeDefault enablePan={false} /> */}
                         <directionalLight position={[20, 50, 50]} />
                         <Center >
-                            <Suspense fallback={<CanvasLoader />}>
+                            <Suspense fallback={null}>
                                 <group scale={0.02} rotation={[-1.5, 0.02, 0.35]}>
                                     <OrbitControls makeDefault enablePan={false}
                                         minDistance={3.5}   // how close you can zoom
                                         maxDistance={5}
 
                                         enableZoom enableRotate={true} dampingFactor={0.02} />
-                                    <LaptopFlyIn key={seletedProjectIndex} media={CurrentProject.img} zoom={2} rotation={0} />
+                                    <LaptopFlyIn media={CurrentProject.img} zoom={2} rotation={0} />
                                 </group>
                             </Suspense>
                         </Center>

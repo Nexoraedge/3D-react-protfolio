@@ -53,7 +53,7 @@ const GlobalLoader = () => {
                 visibility: isLoading ? 'visible' : 'hidden',
             }}
         >
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 12    }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 12 }}>
                 {/* Ring spinner */}
                 <div
                     style={{
@@ -74,7 +74,7 @@ const GlobalLoader = () => {
                     placeItems: 'center',
                     pointerEvents: 'none'
                 }}>
-                    <img src="/typing.gif" alt="Typing animation" width={360} height={240} loading="eager" fetchpriority="high" style={{ display: 'block', maxWidth: '80vw', maxHeight: '60vh', objectFit: 'contain', opacity: 0.95 }} />
+                    <img src="/typing.gif" alt="Typing animation" width={360} height={240} loading="eager" fetchPriority="high" style={{ display: 'block', maxWidth: '80vw', maxHeight: '60vh', objectFit: 'contain', opacity: 0.95 }} />
                 </div>
                 <div style={{
                     fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',

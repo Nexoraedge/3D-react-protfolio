@@ -58,7 +58,7 @@ const Hero = () => {
 
   const size = calculateSizes(isSmall, isMobile, isTablet);
   return (
-    <section id='home' className='min-h-screen flex flex-col relative '>
+    <section id='home' className='min-h-screen flex banner flex-col relative '>
 
       <div className="w-full mx-auto flex flex-col sm:mt-21 mt-10 sm:px-10 px-5 gap-3">
 
@@ -97,10 +97,10 @@ const Hero = () => {
       </div>
       <div className='absolute bottom-7 left-0  right-0 w-full z-10 sm:px-10 px-5'>
         <a href="#contact" className='w-fit'>
-          <Button isBeam e="Let's work together" containerClass="sm:w-fit w-full sm:min-w-96" />
+          <Button isBeam e="Let's work together" container ClassName="sm:w-fit w-full sm:min-w-96" />
         </a>
       </div>
-
+      <canvas id="dotsCanvas" className="banner"></canvas>
     </section>
   )
 }

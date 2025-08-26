@@ -62,7 +62,7 @@ const About = () => {
                         <div>
                             <p className='text-xl font-semibold mb-2 text-white font-berlin'>Where I'm Based</p>
                             <p className='text-[#afb0b6] text-base font-berlin'>Proudly building from India 🇮🇳 — collaborating with teams and clients across the globe.</p>
-                            <Button e="Contact Me" isBeam containerClass="w-full  mt-10 " />
+                            <Button e="Contact Me" isBeam container ClassName="w-full  mt-10 " />
                         </div>
                     </div>
                 </div>

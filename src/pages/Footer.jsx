@@ -11,8 +11,8 @@ const Footer = () => {
             </div>
             <div className="flex gap-3 items-center">
                 {footerlink.map((index) => (
-                        <a href={index.href} target="_blank" rel="noopener noreferrer">
-                    <div key={index.id} className='w-12 h-12 rounded-full flex justify-center items-center bg-neutral-800/95 border border-neutral-700/90'>
+                        <a  key={index.id} href={index.href} target="_blank" rel="noopener noreferrer">
+                    <div className='w-12 h-12 rounded-full flex justify-center items-center bg-neutral-800/95 border border-neutral-700/90'>
                         <img src={index.img} alt={index.name} className='w-1/2 h-1/2' />
                     </div>
                         </a>

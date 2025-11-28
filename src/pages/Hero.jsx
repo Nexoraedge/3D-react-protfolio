@@ -10,6 +10,7 @@ import ReactLogo from '../components/ReactLogo'
 import Herocamera from '../components/Herocamera'
 import Button from '../components/Button'
 import GlobalLoader from '../components/GlobalLoader'
+import CanvasErrorBoundary from '../components/CanvasErrorBoundary'
 
 const Hero = () => {
   // const  x =  useControls('HackingTable',{
@@ -67,31 +68,33 @@ const Hero = () => {
       </div>
       <div className='w-full h-full absolute inset-0 '>
         {/* <Leva /> */}
-        <Canvas className='w-full flex   h-full'>
-          <Suspense fallback={<CanvasLoder />} >
-            <perspectiveCamera makeDefault position={[0, 0, 30]} />
-            <Herocamera isMobile={isMobile} isSmall={isSmall}>
-              <HackingTable
-                //  scale={0.020}
-                // position={[0,0,0]}
-                // rotation={[0.4,179.1,0]}
-                position={size.deskPosition}
-                rotation={[.2, -3.098, 0.005]}
-                scale={size.deskScale}
-              />
-            </Herocamera>
+        <CanvasErrorBoundary fallback={<div className='w-full h-full flex items-center justify-center text-sky-300'>3D scene failed to load.</div>}>
+          <Canvas className='w-full flex   h-full'>
+            <Suspense fallback={<CanvasLoder />} >
+              <perspectiveCamera makeDefault position={[0, 0, 30]} />
+              <Herocamera isMobile={isMobile} isSmall={isSmall}>
+                <HackingTable
+                  //  scale={0.020}
+                  // position={[0,0,0]}
+                  // rotation={[0.4,179.1,0]}
+                  position={size.deskPosition}
+                  rotation={[.2, -3.098, 0.005]}
+                  scale={size.deskScale}
+                />
+              </Herocamera>
 
-            <group >
-              <Target position={size.targetPosition} />
-              <ReactLogo position={size.reactLogoPosition} />
-              {/* <Cube positoin={size.cubePosition} /> */}
-              {/* <Ring position={size.ringPosition} /> */}
+              <group >
+                {/* <Target position={size.targetPosition} /> */}
+                {/* <ReactLogo position={size.reactLogoPosition} /> */}
+                {/* <Cube positoin={size.cubePosition} /> */}
+                {/* <Ring position={size.ringPosition} /> */}
 
-            </group>
-            <ambientLight intensity={1} />
-            <directionalLight position={[10, 10, 10]} intensity={1} />
-          </Suspense>
-        </Canvas>
+              </group>
+              <ambientLight intensity={1} />
+              <directionalLight position={[10, 10, 10]} intensity={1} />
+            </Suspense>
+          </Canvas>
+        </CanvasErrorBoundary>
 
       </div>
       <div className='absolute bottom-7 left-0  right-0 w-full z-10 sm:px-10 px-5'>

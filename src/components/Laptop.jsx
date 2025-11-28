@@ -7,7 +7,7 @@ Title: CyberPunk Laptop Concept Design
 */
 
 import * as THREE from 'three'
-import React, { useRef, useEffect, useMemo } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { useGLTF } from '@react-three/drei'
 /*
 
@@ -51,17 +51,43 @@ const Laptop = ({ media, zoom = 1, rotation = 0, ...props }) => {
   const { nodes, materials } = useGLTF('/models/laptop.glb')
 
   const screenRef = useRef()
+  // Use a local LoadingManager so these texture loads don't hit the DefaultLoadingManager
+  // (prevents other canvases' useProgress/CanvasLoader from reacting)
+  const localManagerRef = useRef(null)
+  if (localManagerRef.current === null) {
+    localManagerRef.current = new THREE.LoadingManager()
+  }
+  const [texture, setTexture] = useState(null)
 
-  // prepare texture if media provided (future step)
-  const texture = useMemo(() => {
-    if (!media) return null;
-    const loader = new THREE.TextureLoader();
-    return loader.load(media, (tex) => {
-      // Ensure scaling is centered
-      tex.center.set(0.5, 0.5);
-      tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
-    });
-  }, [media]);
+  // Load texture after commit to avoid triggering loader updates during render
+  useEffect(() => {
+    let cancelled = false
+    let loadedTex = null
+
+    if (!media) {
+      setTexture(null)
+      return
+    }
+
+    const loader = new THREE.TextureLoader(localManagerRef.current)
+    loadedTex = loader.load(
+      media,
+      (tex) => {
+        if (cancelled) return
+        // Ensure scaling is centered
+        tex.center.set(0.5, 0.5)
+        tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping
+        setTexture(tex)
+      }
+    )
+
+    return () => {
+      cancelled = true
+      if (loadedTex && typeof loadedTex.dispose === 'function') {
+        loadedTex.dispose()
+      }
+    }
+  }, [media])
 
   useEffect(() => {
     if (!screenRef.current) return;

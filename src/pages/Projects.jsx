@@ -7,11 +7,11 @@ import LaptopFlyIn from '../components/LaptopFlyIn';
 
 const Projects = () => {
     const projectCount = myProjects.length;
-    const [seletedProjectIndex, setSeletedProjectIndex] = useState(0)
-    const CurrentProject = myProjects[seletedProjectIndex];
+    const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
+    const CurrentProject = myProjects[selectedProjectIndex];
     const HandleNavigation = (direction) => {
-        setSeletedProjectIndex((prevIndex) => {
-            if (direction === 'prevIndex') {
+        setSelectedProjectIndex((prevIndex) => {
+            if (direction === 'previous') {
                 return prevIndex === 0 ? projectCount - 1 : prevIndex - 1
             }
             else {
@@ -75,25 +75,24 @@ const Projects = () => {
 
                     </div>
                 </div>
-                <div className="border-neutral-700/50 border  bg-neutral-950/20 rounded-lg h-96 md:h-full ">
-                    <Canvas camera={{ position: [2, 1, 5], fov: 45 }}>
-                        <ambientLight intensity={1} />
-
-                        {/* <OrbitControls makeDefault enablePan={false} /> */}
-                        <directionalLight position={[20, 50, 50]} />
-                        <Center >
-                            <Suspense fallback={null}>
-                                <group scale={0.02} rotation={[-1.5, 0.02, 0.35]}>
-                                    <OrbitControls makeDefault enablePan={false}
-                                        minDistance={3.5}   // how close you can zoom
-                                        maxDistance={5}
-
-                                        enableZoom enableRotate={true} dampingFactor={0.02} />
-                                    <LaptopFlyIn media={CurrentProject.img} zoom={2} rotation={0} />
-                                </group>
-                            </Suspense>
-                        </Center>
-                    </Canvas>
+                <div className="border-neutral-700/50 border bg-neutral-950/20 rounded-lg h-96 lg:h-auto relative w-full overflow-hidden">
+                    <div className="absolute inset-0 w-full h-full flex items-center justify-center">
+                        <Canvas camera={{ position: [2, 1, 5], fov: 45 }}>
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[20, 50, 50]} />
+                            <Center>
+                                <Suspense fallback={null}>
+                                    <group scale={0.02} rotation={[-1.5, 0.02, 0.35]}>
+                                        <OrbitControls makeDefault enablePan={false}
+                                            minDistance={3.5}
+                                            maxDistance={5}
+                                            enableZoom enableRotate={true} dampingFactor={0.02} />
+                                        <LaptopFlyIn key={selectedProjectIndex} media={CurrentProject.img} zoom={2} rotation={0} />
+                                    </group>
+                                </Suspense>
+                            </Center>
+                        </Canvas>
+                    </div>
                 </div>
             </div>
         </section>

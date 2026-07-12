@@ -55,64 +55,39 @@ const Contact = () => {
             <div className="relative min-h-screen flex items-center justify-center flex-col">
 
 
-                <div className='max-w-xl relative z-10 sm:px-10 px-5 mt-12 lg:mt-25'>
+                <div className='w-full max-w-4xl relative z-10 sm:px-10 px-5 mt-12 lg:mt-20 mx-auto'>
+                    
+                    {/* Decorative glowing background blobs (Subtle, warm tones) */}
+                    <div className="absolute top-0 -left-20 w-96 h-96 bg-orange-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
+                    <div className="absolute bottom-0 -right-20 w-96 h-96 bg-amber-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-                    <h3 className='sm:text-4xl text-3xl font-semibold text-gray_gradient'>
-                        Let's Talk
-                    </h3>
-                    <p className='text-lg text text-neutral-100 mt-3 '>
-                    Whether you're planning a new idea or refining an old one—I’m here to collaborate, innovate, and bring your ideas to life.
-                    </p>
+                    <div className='flex flex-col items-center justify-center p-12 sm:p-20 bg-neutral-900/40 backdrop-blur-3xl border border-white/10 rounded-[3rem] shadow-2xl relative overflow-hidden'>
+                        
+                        {/* Abstract gradient mesh for the card */}
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-orange-900/10 via-transparent to-transparent opacity-80"></div>
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-neutral-800/30 via-transparent to-transparent opacity-80"></div>
+                        
+                        <img src="/assets/terminal.png" alt="terminal background" className="absolute -top-32 -right-32 w-96 h-96 opacity-[0.02] rotate-12 pointer-events-none" />
 
-                    <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col space-y-7' >
-                        <label htmlFor="name" className='space-y-3'>
-                            <span className=' text-lg text-neutral-100'>Full Name</span>
-                            <input type="text" name='name'
-                                value={form.name}
-                                onChange={handleChange}
-                                required
-                                className='w-full bg-neutral-800/50 px-5 py-2 min-h-14 rounded-lg placeholder:text-neutral-500/80 text-lg text-neutral-100/90 shadow-neutral-900/80 shadow-2xl focus:outline-none'
-                                placeholder='Something_Name' />
-                        </label>
-
-
-                        <label htmlFor="email" className='space-y-3'>
-                            <span className=' text-lg text-neutral-100'>Email</span>
-                            <input type="email" name='email'
-                                value={form.email}
-                                onChange={handleChange}
-                                required
-                                className='w-full bg-neutral-800/50 px-5 py-2 min-h-14 rounded-lg placeholder:text-neutral-500/80 text-lg text-neutral-100/90 shadow-neutral-900/80 shadow-2xl focus:outline-none'
-                                placeholder='Somthing123@email.com' />
-                        </label>
-
-
-
-                        <label htmlFor="message" className='space-y-3'>
-                            <span className=' text-lg text-neutral-100'>Your Message</span>
-                            <textarea
-                                name="message"
-
-                                value={form.message}
-                                required
-                                rows={5}
-                                onChange={handleChange}
-                                className='w-full bg-neutral-800/50 px-5 py-2 min-h-14 rounded-lg placeholder:text-neutral-500/80 text-lg text-neutral-100/90 shadow-neutral-900/80 shadow-2xl focus:outline-none'
-                                placeholder='Hi  , I am intreseted in....'
-
-                            ></textarea>
-                        </label>
-
-                        <button className='bg-neutral-800 px-5 py-2 min-h-12 rounded-lg  cursor-pointer shadow-neutral-300/20 shadow-lg flex justify-center items-center text-lg text-white gap-3'
-                            type='submit'
-                            disabled={loading}
-
+                        <h4 className='text-4xl md:text-6xl font-extrabold text-white mb-6 z-10 text-center tracking-tight leading-tight'>
+                            Let's Build Something <br/>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-[#e2725b] drop-shadow-sm">Extraordinary.</span>
+                        </h4>
+                        
+                        <p className='text-lg md:text-xl text-neutral-400 text-center mb-12 max-w-2xl z-10 font-light leading-relaxed'>
+                            Whether you're planning a new idea or refining an old one—I’m here to collaborate, innovate, and bring your vision to life. Book a consultation or explore sponsorship opportunities.
+                        </p>
+                        
+                        <a 
+                            href="https://dhonidev-ai.vercel.app/consult" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className='relative z-10 group inline-flex items-center justify-center gap-3 px-10 py-4 bg-white text-black rounded-full overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_rgba(255,255,255,0.2)] hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.4)]'
                         >
-                            {loading ? 'Sending...' : 'Send Message'}
-                            <img src="/assets/arrow-up.png" alt="arrow-up" className='w-2.5 h-2.5 object-contain invert brightness-0' />
-                        </button>
-                    </form>
-
+                            <span className='relative text-lg font-bold tracking-wide'>Work With Me</span>
+                            <img src="/assets/arrow-up.png" alt="arrow-up" className='relative w-4 h-4 object-contain transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1' />
+                        </a>
+                    </div>
                 </div>
 
             </div>

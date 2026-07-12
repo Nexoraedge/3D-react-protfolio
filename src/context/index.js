@@ -27,10 +27,10 @@ export const navLinks = [
     {
       id: 1,
       name: 'Himanshu Jain',
-      position: 'Owner of Manchaha Restaurnt',
+      position: 'Owner of Manchaha Restaurant',
       img: 'assets/him.jpg',
       review:
-        'Working with Hardik was a fantastic experience. He delivered us the logo of Manchaha Restaurnat with great attention to detail. I highly recommend Hardik for any logo design needs.',
+        'Working with Hardik was a fantastic experience. He delivered us the logo of Manchaha Restaurant with great attention to detail. I highly recommend Hardik for any logo design needs.',
     },
     {
       id: 2,
@@ -59,6 +59,90 @@ export const navLinks = [
   ];
   
   export const myProjects = [
+    {
+      title: 'PropDesk - Real Estate CRM & Management',
+      desc: 'India\'s leading real estate CRM system and property management software for brokers and agencies. Features include smart property matching, lead pipeline management, and WhatsApp PDF sharing.',
+      subdesc: 'Built with Next.js, TypeScript, Tailwind CSS, and Supabase.',
+      href: 'https://thepropdesk.in',
+      texture: '/textures/project/project1.mp4',
+      logo: '/Project/propdesk_logo.png',
+      img: '/Project/propdesk.png',
+      logoStyle: {
+        backgroundColor: '#1C1A43',
+        border: '0.2px solid #252262',
+        boxShadow: '0px 0px 60px 0px #635BFF4D',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        { id: 1, name: 'Next.js', path: '/assets/nextjs.png' },
+        { id: 2, name: 'TypeScript', path: '/assets/typescript.png' },
+        { id: 3, name: 'TailwindCSS', path: '/assets/tailwindcss.png' },
+        { id: 4, name: 'Supabase', path: '/assets/supabase.png' }
+      ],
+    },
+    {
+      title: 'TypePilot - Native AI Keyboard Helper',
+      desc: 'Transform how you type with the ultimate AI keyboard helper for Android. Features real-time grammar correction, smart replies, tone adjustment, and instant translation across all apps.',
+      subdesc: 'Built with Next.js, TypeScript, Tailwind CSS, and Supabase.',
+      href: 'https://gettypepilot.com',
+      texture: '/textures/project/project2.mp4',
+      logo: '/Project/Typepilot_logo.png',
+      img: '/Project/typepilot.png',
+      logoStyle: {
+        backgroundColor: '#24273a',
+        border: '0.2px solid #FFCAAD',
+        boxShadow: '0px 0px 60px 0px #AA3C304D',
+      },
+      spotlight: '/assets/spotlight2.png',
+      tags: [
+        { id: 1, name: 'Next.js', path: '/assets/nextjs.png' },
+        { id: 2, name: 'TypeScript', path: '/assets/typescript.png' },
+        { id: 3, name: 'TailwindCSS', path: '/assets/tailwindcss.png' },
+        { id: 4, name: 'Supabase', path: '/assets/supabase.png' }
+      ],
+    },
+    {
+      title: 'Ayuniv - Natural Wellness & Elixirs',
+      desc: 'A premium wellness sanctuary offering pure, cold-pressed herbal juices and elixirs inspired by Ayurveda. Discover curated wellness boxes for immunity, digestion, and detox.',
+      subdesc: 'A robust e-commerce platform built with Next.js, TypeScript, Tailwind CSS, and Supabase. Features AI integration using Gemini and secure Cashfree payment gateways.',
+      href: 'https://ayuniv.in',
+      texture: '/textures/project/project3.mp4',
+      logo: '/Project/logo_ayuniv.png',
+      img: '/Project/tests.png',
+      logoStyle: {
+        backgroundColor: '#130A29',
+        border: '0.2px solid #8F1B6E',
+        boxShadow: '0px 0px 60px 0px #C2229F',
+      },
+      spotlight: '/assets/spotlight3.png',
+      tags: [
+        { id: 1, name: 'Next.js', path: '/assets/nextjs.png' },
+        { id: 2, name: 'TypeScript', path: '/assets/typescript.png' },
+        { id: 3, name: 'TailwindCSS', path: '/assets/tailwindcss.png' },
+        { id: 4, name: 'Supabase', path: '/assets/supabase.png' }
+      ],
+    },
+    {
+      title: 'Agrawal Properties - Real Estate Agency',
+      desc: 'Jaipur\'s most trusted real estate agency specializing in JDA plots, Housing Board homes, and luxury flats. Offers expert consultation and a seamless property browsing experience.',
+      subdesc: 'Built with Next.js, TypeScript, Tailwind CSS, and Supabase for optimal performance and scale.',
+      href: 'https://agrawalpropertys.com',
+      texture: '/textures/project/project4.mp4',
+      logo: '/Project/ag_logo.png',
+      img: '/Project/agrawal.png',
+      logoStyle: {
+        backgroundColor: '#0E1F38',
+        border: '0.2px solid #24D565',
+        boxShadow: '0px 0px 60px 0px #2F67B64D',
+      },
+      spotlight: '/assets/spotlight4.png',
+      tags: [
+        { id: 1, name: 'Next.js', path: '/assets/nextjs.png' },
+        { id: 2, name: 'TypeScript', path: '/assets/typescript.png' },
+        { id: 3, name: 'TailwindCSS', path: '/assets/tailwindcss.png' },
+        { id: 4, name: 'Supabase', path: '/assets/supabase.png' }
+      ],
+    },
     { 
       title: 'Tone Genie - AI-powered Text Enhancer',
       desc: 'Tone Genie is a cutting-edge browser extension that leverages AI technology to enhance the readability of text. With features like AI-driven text editing, essay writing, bid writing, chat generation, and grammar improvement, it revolutionizes the way you interact with text online.',
@@ -112,7 +196,7 @@ export const navLinks = [
       title: 'Interview Prep - AI powered Interviewer',
       desc: 'Interview Prep is a unique Software-as-a-Service app that transforms the way interviews are conducted. With advanced AI-powered features like text-to-multiple-voices functionality, it allows creators to generate diverse voiceovers from a single text input.',
       subdesc:
-        'Built as a unique Software-as-a-Service app with Next.js 15, Tailwind CSS, TypeScript, Vapi-ai, Ai-SDK Google , shadcn-ui and Firebase, Interview Prep is designed for optimal performance and scalability.',
+        'Built as a unique Software-as-a-Service app with Next.js 15, Tailwind CSS, TypeScript, Vapi-ai, Google AI SDK , shadcn-ui and Firebase, Interview Prep is designed for optimal performance and scalability.',
       href: 'https://interview-prep-five-iota.vercel.app/',
       texture: '/textures/project/project1.mp4',
       logo: '/assets/project-logo1.svg',
@@ -266,10 +350,10 @@ export const navLinks = [
       ],
     },
     {
-      title: 'GetMeashikanji-Fund your projects',
-      desc: 'GetMeashikanji is a comprehensive online funding platform that offers users a to get funding for their projects. It allows users to connect bank accounts, upi and real-time transactions, and seamlessly transfer money to other users.',
+      title: 'GetMeShikanji-Fund your projects',
+      desc: 'GetMeShikanji is a comprehensive online funding platform that offers users a to get funding for their projects. It allows users to connect bank accounts, upi and real-time transactions, and seamlessly transfer money to other users.',
       subdesc:
-        'Built with Next auth ,MongoDB , Mongoose and Razorpay, GetMeashikanji ensures a smooth and secure funding experience , tailored to meet the needs of modern consumers.',
+        'Built with Next auth ,MongoDB , Mongoose and Razorpay, GetMeShikanji ensures a smooth and secure funding experience , tailored to meet the needs of modern consumers.',
       href: 'https://getmeashikanji.vercel.app/',
       texture: '/textures/project/project4.mp4',
       logo: '/assets/shikanji.png',
@@ -330,7 +414,7 @@ export const navLinks = [
       name: 'Built My First AI Tool (extension)',
       pos: 'ToneGenie - AI-powered Text Enhancer',
       duration: '2025 - June',
-      title: "ToneGenie is a browser extension that uses AI to improve text readability. It features AI-driven text editing, writing, chat generation , bit writing, and grammar improvement.",
+      title: "ToneGenie is a browser extension that uses AI to improve text readability. It features AI-driven text editing, writing, chat generation , bid writing, and grammar improvement.",
       icon: '/assets/tone_png.png',
       animation: 'victory',
     },
@@ -339,7 +423,7 @@ export const navLinks = [
       name: 'Learned Full-Stack Development',
       pos: 'Full-Stack Developer',
       duration: '2025 - March',
-      title: "I learned full-stack development using React,tailwindcss, github, Node.js, and MongoDB. I built some web applications like Getmeashikanji , TODO App and Password Saver. ",
+      title: "I learned full-stack development using React,tailwindcss, github, Node.js, and MongoDB. I built some web applications like GetMeShikanji , TODO App and Password Saver. ",
       icon: '/assets/web.png',
       animation: 'clapping',
     },
@@ -377,6 +461,6 @@ export const navLinks = [
       id:4,
       name:'linkedIn',
       img: '/assets/linke.png',
-      href: 'www.linkedin.com/in/devdhoni-ai'
+      href: 'https://www.linkedin.com/in/devdhoni-ai'
     }
   ];
